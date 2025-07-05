@@ -16,7 +16,7 @@ public class ConsoleUI {
     private final List<Question> questions;
     private final String quizTitle;
 
-    public ConsoleUI(@Value("${spring-quiz.title:\"Неназванный тест\"}") String title, QuizConfig quizConfig, String quizTitle) {
+    public ConsoleUI(@Value("${spring-quiz.title:\"Неназванный тест\"}") String quizTitle, QuizConfig quizConfig) {
         this.questions = quizConfig.getQuestions();
         this.quizTitle = quizTitle;
         this.input = new Scanner(System.in);
